@@ -26,7 +26,7 @@
 
 ### 내용 정리
 
-'''python
+'''
 A, B = input().split()
 print(int(A)+int(B))
 '''
