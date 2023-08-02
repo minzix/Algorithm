@@ -26,15 +26,14 @@
 
 ### 내용 정리
 
-`\\` : Backslash
-`\'` : Single quote
-`\"` : Double quote
-````` : Backtick or grave accent
-`\n` : Newline
-`\t` : Tab
-`\r` : Carriage return
-`\b` : Backspace
-`\f` : Form feed (used rarely)
+`\\` : Backslash <br>
+`\'` : Single quote <br>
+`\"` : Double quote <br>
+`\n` : Newline <br>
+`\t` : Tab <br>
+`\r` : Carriage return <br>
+`\b` : Backspace <br>
+`\f` : Form feed (used rarely) <br>
 
 input: 
 ```python
