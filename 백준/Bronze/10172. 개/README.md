@@ -22,3 +22,45 @@
 
  <p>개를 출력한다.</p>
 
+***
+
+### 내용 정리
+
+`\\` : Backslash
+`\'` : Single quote
+`\"` : Double quote
+````` : Backtick or grave accent
+`\n` : Newline
+`\t` : Tab
+`\r` : Carriage return
+`\b` : Backspace
+`\f` : Form feed (used rarely)
+
+input: 
+```python
+print("This is a backslash: \\")
+print("This is a single quote: \'")
+print("This is a double quote: \"")
+print("This is a backtick: \`")
+print("This is a newline:\nHello")
+print("This is a tab:\tHello")
+print("This is a carriage return:\rHello")
+print("This is a backspace: Hello\b!")
+print("This is a form feed:\fHello")
+```
+output: 
+This is a backslash: \
+This is a single quote: '
+This is a double quote: "
+This is a backtick: `
+This is a newline:
+Hello
+This is a tab:	Hello
+Helloriage return: Hello
+This is a backspace: Hell!
+This is a form feed:
+Hello
+
+
+
+
