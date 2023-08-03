@@ -58,6 +58,7 @@ else:
     print("{} {}".format(h, m))
 ```
 
+The correct code
 ```python
 H, M = map(int, input().split())
 
