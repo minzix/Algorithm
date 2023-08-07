@@ -34,3 +34,14 @@
 
  <p>각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.</p>
 
+ ### 내 정답 코드
+ ```python
+import sys
+T = int(sys.stdin.readline().strip())
+i = 0
+for i in range(T): 
+    a, b = map(int, sys.stdin.readline().strip().split()) 
+    print(a+b)
+```
+* 더럽게 어려움 .. 새로 나온 개념 복습해야대
+
