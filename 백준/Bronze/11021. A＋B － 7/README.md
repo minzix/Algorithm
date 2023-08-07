@@ -24,3 +24,22 @@
 
  <p>각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.</p>
 
+### 오답노트 ~ㅎ
+
+```python
+T = int(sys.stdin.readline().strip())
+#i = 0 : 이런 코드는 불필요함, for문에서 이미 i는 정의됨
+for i in range(T+1): 
+    a, b = map(int, sys.stdin.readline().strip().split())
+    print(f"Case #{i+1}: {a+b}") #i+1로 수정
+    #i+=1 얘도 불필요
+```
+
+정답
+```python
+t = int(input())
+
+for i in range(1, t+1):  # 1부터 t까지
+    a, b = map(int, input().split())
+    print(f'Case #{i}: {a+b}')
+```
