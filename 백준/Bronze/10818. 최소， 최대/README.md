@@ -22,3 +22,21 @@
 
  <p>첫째 줄에 주어진 정수 N개의 최솟값과 최댓값을 공백으로 구분해 출력한다.</p>
 
+### 아직 이해 안 감 .. ㅜ
+
+1. 정답코드
+   
+```python
+cnt = int(input())
+numbers = list(map(int, input().split()))
+print(min(numbers),max(numbers))
+```
+
+2. 내 코드
+```python
+#N = int(input())
+arr = list(map(int, input().split()))
+print(f"{min(arr)} {max(arr)}")
+```
+
+왜 틀린걸까요 ㅠ
