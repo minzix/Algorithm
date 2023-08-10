@@ -24,3 +24,57 @@
 
  <p>출력은 2줄이다. 1번째 줄엔 제출하지 않은 학생의 출석번호 중 가장 작은 것을 출력하고, 2번째 줄에선 그 다음 출석번호를 출력한다.</p>
 
+### 오답노트.. 
+
+1. 내 틀린 코드 <- 왜 .. 틀렷을까 ..
+  
+```python
+arr = [] # 항상 배열 초기화 기억하기!!
+for i in range(28): 
+  arr.append(int(input())) #append 사용하기!
+arr.sort()
+nsub = []
+
+for i in range(1, 30):
+  #if arr[i] != i: 이케 쓰면 일치하지 않는 부분부터 쭉 걸림
+   if i not in arr: #챗씨의 의견 .. 굳.. 
+    nsub.append(i)
+nsub.sort()
+print(nsub[0])
+print(nsub[1])
+```
+   
+2. 정답코드 (1)
+ ```python
+students = [i for i in range(1,31)]
+
+for _ in range(28):
+    applied = int(input())
+    students.remove(applied) #소거
+
+print(min(students))
+print(max(students))
+```
+
+3. 정답코드 (2)
+   ```python
+   import sys
+
+students = [0 for i in range(30)]
+
+for i in range(28):
+    student_idx = int(sys.stdin.readline())
+    students[student_idx-1] = student_idx
+    
+for i in range(2):
+    idx = students.index(0)
+    print(idx+1)
+    students[idx] = -1
+    ```
+4. 정답코드(3)
+```python
+students = [i for i in range(1,31)]
+for _ in range(28):
+    s.remove(int(input()))
+print(*students,sep="\n")
+```
