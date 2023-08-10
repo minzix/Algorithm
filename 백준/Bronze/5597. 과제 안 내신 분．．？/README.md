@@ -57,8 +57,8 @@ print(max(students))
 ```
 
 3. 정답코드 (2)
-   ```python
-   import sys
+```python
+import sys
 
 students = [0 for i in range(30)]
 
@@ -70,7 +70,8 @@ for i in range(2):
     idx = students.index(0)
     print(idx+1)
     students[idx] = -1
-    ```
+```
+    
 4. 정답코드(3)
 ```python
 students = [i for i in range(1,31)]
