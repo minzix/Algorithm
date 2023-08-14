@@ -30,3 +30,34 @@
 
  <p>모든 순서를 바꾼 다음에, 가장 왼쪽에 있는 바구니부터 바구니에 적혀있는 순서를 공백으로 구분해 출력한다.</p>
 
+ ### 오답노트 ~~
+
+내 틀린 코드... 이유를 모르겠는데 출력초과 오류 오지게 남 대체 왜?? 난 잘만 돌아가는데?
+```python
+N, M = map(int, input().split())
+arr = [i+1 for i in range(0, N)]
+print(arr)
+for a in range(M):
+  i, j = map(int, input().split())
+  #arr[i-1:j] = sorted(arr[i-1:j], reverse=True) -> sort(reverse=True)와 reverse의 차이를 알아보아요!
+  arr[i-1:j] = arr[i-1:j][::-1]
+  print(arr)
+print(*arr, sep=" ")
+```
+
+블로거의 맞는 코드
+ ```python
+N, M = map(int, input().split())
+
+basket = [i for i in range(1,N+1)]
+
+for i in range(M):
+    i,j = map(int, input().split())
+    temp = basket[i-1:j]
+    temp.reverse()
+    basket[i-1:j] = temp
+
+for i in range(N):
+    print(basket[i], end = ' ')
+```
+
