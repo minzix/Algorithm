@@ -24,3 +24,25 @@
 
  <p>각 테스트 케이스에 대해 P를 출력한다.</p>
 
+### 오답노트
+
+1. my wrong code
+```python
+T = int(input())
+for i in range(T): 
+  R, S = input().split()
+  R = int(R)
+  S = str(S)
+  for i in range(len(S)): 
+    print(S[i]*R, end="")
+```
+2. correct code
+```
+n = int(input())
+
+for _ in range(n):
+    cnt, word = input().split()
+    for x in word:
+        print(x*int(cnt), end='')  # end='' 옆으로 붙임
+    print()  # 줄넘김
+```
