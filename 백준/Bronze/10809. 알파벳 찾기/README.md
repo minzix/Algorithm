@@ -24,3 +24,31 @@
 
 <p>만약, 어떤 알파벳이 단어에 포함되어 있지 않다면 -1을 출력한다. 단어의 첫 번째 글자는 0번째 위치이고, 두 번째 글자는 1번째 위치이다.</p>
 
+### 오답노트 
+
+1. My wrong code
+```python
+S = str(input())
+# 알파벳 소문자 아스키코드: a 97 ~ z 122(차이: 25)
+arr = []
+
+alpha = 97
+print(ord(S[0]))
+while alpha <= 122:
+  for i in range(len(S)):
+    if ord(S[i]) == alpha:
+      arr.append(i)
+    else:
+      arr.append(-1)
+    alpha += 1
+print(*arr, sep=" ")
+```
+
+2. Correct code
+```python
+word = input()
+alphabet = list(range(97,123))  # 아스키코드 숫자 범위
+
+for x in alphabet :
+    print(word.find(chr(x)))
+```
