@@ -4,7 +4,7 @@ def solution(a, b):
         answer = a ** 2 + b ** 2
     elif a % 2 == 0 and b % 2 == 0: # 모두 홀수가 아님
         if a - b < 0: 
-            answer = -(a - b)
+            answer = -(a - b) # abs(): 절댓값 반환 함수. 
         else: answer = a - b
     else: 
         answer = 2 * (a + b)
