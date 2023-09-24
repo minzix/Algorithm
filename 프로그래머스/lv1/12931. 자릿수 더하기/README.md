@@ -52,5 +52,17 @@
 <p>입출력 예 #2<br>
 9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.</p>
 
+<p>더 나은 답변... 진짜 개천잰가..</p>
+```python
+def solution(n):
+    answer = 0
+    num = int(n)
+    while n > 0:
+        answer += n % 10
+        n = n // 10
+
+    return answer
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
