@@ -66,5 +66,18 @@
 <li>1, 2, 3이 <code>numbers</code>에 없으므로, 1 + 2 + 3 = 6을 return 해야 합니다.</li>
 </ul>
 
+### 오답까진 아님 그냥 좀 더 돌아갔을 뿐..ㅎ
+
+```python
+def solution(numbers):
+    answer = 0
+    num_sum = []
+    numberlist = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for i in range(10): 
+        if numberlist[i] not in numbers: 
+            num_sum.append(numberlist[i])
+    answer = sum(num_sum)
+    return answer
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
