@@ -152,5 +152,37 @@
 <li>정확성 테스트 : 10초</li>
 </ul>
 
+### 오답... 
+
+```python
+def solution(s):
+    answer = ""
+    item_sum = ""
+    number = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    mydic = {
+        "zero" : "0", 
+        "one" : "1", 
+        "two" : "2", 
+        "three" : "3", 
+        "four" : "4", 
+        "five" : "5", 
+        "six" : "6", 
+        "seven" : "7", 
+        "eight" : "8", 
+        "nine" : "9"
+    }
+
+    for item in s:
+      if item.isdigit(): 
+        answer = answer + item
+      elif item.isalpha(): 
+        item_sum = item_sum + item
+        for i in range(9): 
+          if item_sum == number[i]: 
+            answer = answer + mydic[item_sum]
+            item_sum = ""
+    return int(answer)
+```
+진짜 공부를 해야겟다,, replace(a, b)랑 dictionary.items() 쓰는 문제였는데 더럽게 길게 풀고 정확도 50으로 틀림 ㅠ
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
