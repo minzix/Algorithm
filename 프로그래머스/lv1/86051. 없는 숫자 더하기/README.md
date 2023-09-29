@@ -78,8 +78,6 @@ def solution(numbers):
     for num in numbers:
         sumList.remove(num)
     return sum(sumList)
-
-
 # solution = lambda x: 45 - sum(x) 람다식 풀이
 ```
 
