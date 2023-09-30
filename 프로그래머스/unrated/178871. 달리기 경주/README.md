@@ -66,5 +66,31 @@
 
 <p>4등인 "kai" 선수가 2번 추월하여 2등이 되고 앞서 3등, 2등인 "poe", "soe" 선수는 4등, 3등이 됩니다. 5등인 "mine" 선수가 2번 추월하여 4등, 3등인 "poe", "soe" 선수가 5등, 4등이 되고 경주가 끝납니다. 1등부터 배열에 담으면 ["mumu", "kai", "mine", "soe", "poe"]이 됩니다.</p>
 
+### 알아둬야 할 배열 관련 문법
+1. 리스트에서 원소로 인덱스 찾기
+   ```python
+   mylist.index(원소)
+   ```
+2. 리스트를 딕셔너리로 바꾸기
+   ```python
+   # 딕셔너리이름 = {키로 지정하고 싶은 것 : 값으로 지정하고 싶은 것 for 키, 값 in enumerate(리스트이름)}
+   maps = {player: idx for idx, player in enumerate(players)}
+   ```
+
+### 시간복잡도를 고려하지 않은 내 오답
+
+```python
+def solution(players, callings):
+    temp = ""
+    for i in range(len(callings)): 
+        for j in range(len(players)): 
+            if callings[i] == players[j]: 
+                temp = players[j-1]
+                players[j-1] = players[j]
+                players[j] = temp
+    answer = []
+    answer = players
+    return answer
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
